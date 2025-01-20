@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --accent-color: #756abb;
+  --font-color: #383838;
+}
+
+body {
+  padding: 10px;
+  font-family: Roboto;
+  color: var(--font-color);
+}
+
+header,
+main,
+footer {
+  margin: 0 auto;
+  max-width: 1080px;
+}
+
+header {
+  text-align: center;
+
+  h1 {
+    color: var(--accent-color);
+  }
+}
