@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Inria+Sans:ital,wght@0,300;1,700&family=Inter:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+	--color-primary: darkslategray;
+	--color-secondary: darkslateblue;
+	--color-tertiary: aquamarine;
+}
+
+/* les a n'héritent pas de base du parent html --> si on veut agir sur tout : *{} */
+* {
+	color: var(--color-primary);
+}
+
+/* html  : la balise html et ses descendants */
+html {
+	font-size: 16px;
+	scroll-behavior: smooth;
+	body {
+		/* Reset propriétés par défaut du body */
+		padding: 0;
+		margin: 0;
+
+		background-image: url("https://platform.polygon.com/wp-content/uploads/sites/2/2024/12/n7hRLND.png?quality=90&strip=all&crop=2.25%2C0%2C95.5%2C100&w=1200");
+		/* target element qui a un p comme enfant direct */
+
+		header {
+			height: 100px;
+			background-color: var(--color-secondary);
+			position: sticky;
+			top: 0;
+		}
+
+		> p:nth-child(1) {
+			font-size: 1.5rem;
+			font-style: italic;
+			text-transform: capitalize;
+			text-decoration-line: line-through;
+			text-decoration-color: red;
+			text-decoration-style: dotted;
+			text-indent: 50px;
+			word-spacing: 10px;
+			text-shadow: 5px 5px 5px blueviolet;
+			direction: rtl;
+		}
+
+		> p:nth-child(2) {
+			font-size: 2rem;
+			text-align: justify;
+			font-family: "Roboto";
+			/* background-size: 100% auto;
+            background-position: center center; 
+			background-size: cover;*/
+			/* background-size: contain;
+			background-repeat: no-repeat; */
+			-webkit-backdrop-filter: blur(10px);
+			backdrop-filter: blur(10px);
+		}
+
+		> div:nth-of-type(1) {
+			border: 1px solid black;
+			width: 200px;
+			height: 200px;
+			/* overflow-y: scroll; */
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		span {
+			border: 1px solid red;
+		}
+
+		p:nth-of-type(3) {
+			border: 1px solid blue;
+			height: 300px;
+			overflow-wrap: break-word;
+
+			line-height: 25px;
+
+			span {
+				vertical-align: super;
+			}
+		}
+
+		> div:nth-of-type(2) {
+			width: 30%;
+			aspect-ratio: 1/1;
+			background-color: var(--color-tertiary);
+		}
+
+		textarea {
+			resize: none;
+		}
+
+		div:nth-of-type(3) {
+			width: 300px;
+			height: 200px;
+			background-color: lightcoral;
+			overflow-wrap: break-word;
+			margin: 25px;
+			padding: 20px 50px;
+			box-sizing: content-box;
+			border: 3px dashed darkslategray;
+			border-radius: 100px;
+			outline: 5px solid red;
+			box-shadow: inset 0 0 0 3px darkcyan;
+		}
+
+		#position {
+			height: 100px;
+			width: 100px;
+			background-color: hotpink;
+			position: relative;
+			top: 100px;
+			left: 100px;
+
+			#position2 {
+				height: 50px;
+				width: 50px;
+				background-color: lightgreen;
+				position: absolute;
+				top: 5px;
+				right: 5px;
+			}
+		}
+	}
+}
