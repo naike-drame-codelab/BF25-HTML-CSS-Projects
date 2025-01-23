@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo05_Formulaires</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- method :
+		 	* get : envoie via url, 255 caractères max
+			* post : envoie d'un objet non visible dans l'url -->
+    <form action="" method="post">
+      <label for="name">Prénom : </label>
+      <input id="name" type="text" name="first_name" />
+
+      <br />
+
+      <label for="password">Mot de passe : </label>
+      <input id="password" type="password" name="pwd" />
+
+      <br />
+
+      <input id="upload" type="file" name="avatar" multiple />
+
+      <div>
+        <!-- (input:radio+label)*3 -->
+        <input id="h" type="radio" name="gender" value="homme" />
+        <label for="h">Homme</label>
+        <input id="f" type="radio" name="gender" value="femme" />
+        <label for="f">Femme</label>
+        <input id="o" type="radio" name="gender" value="autre" />
+        <label for="o">Autre</label>
+      </div>
+
+      <select id="meal" name="meal">
+        <option value="">Choisissez le repas de midi</option>
+        <option value="burger">Burger</option>
+        <option value="pizza">Pizza</option>
+        <option value="sushi">Sushi</option>
+        <option value="sand">Sandwich</option>
+        <option value="pates">Pâtes</option>
+      </select>
+
+      <input type="submit" value="Envoyer" />
+      <!-- Attention, un bouton placé sans précision du type va déclencher l'envoi du formulaire -->
+      <button type="button">Click Me</button>
+    </form>
+
+    <!-- 
+	En post, c'est un objet comme ceci qui est envoyé:
+	{ 
+		first-name : "Naïké"
+	 	pwd : "Test1234="
+	}		
+	-->
+  </body>
+</html>

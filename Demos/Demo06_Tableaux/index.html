@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo05_Tableaux</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <table>
+      <!--  En-tête du tableau, optionnel -->
+      <thead>
+        <tr>
+          <th>Produit</th>
+          <th>Quantité</th>
+          <th>Prix</th>
+        </tr>
+      </thead>
+      <!-- 	Corps du tableau, obligatoire. Si oublié, la plupart des browsers en rajoutent un -->
+      <tbody>
+        <tr>
+          <td>Burger Bacon</td>
+          <td>1</td>
+          <td>7.50€</td>
+        </tr>
+        <tr>
+          <td>Burger Cheese</td>
+          <td>2</td>
+          <td>8€</td>
+        </tr>
+        <tr>
+          <td>Frites</td>
+          <td>2</td>
+          <td>8€</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td colspan="2">Total :</td>
+          <td>23.50€</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Lundi</th>
+          <th>...</th>
+          <th>Samedi</th>
+          <th>Dimanche</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>On bosse...</td>
+          <td>On bosse toujours!</td>
+          <td colspan="2" rowspan="2">Weekend !</td>
+        </tr>
+        <tr>
+          <td>On bosse...</td>
+          <td>On bosse toujours!</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

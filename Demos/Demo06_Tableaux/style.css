@@ -1,0 +1,27 @@
+/*CSS Mobile First, puis queries pour gérer les formats plus grands*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+table,
+td,
+th {
+  border: 1px solid black;
+  /* Pour fusionner uniformément les bordures des cellules */
+  padding: 5px;
+  border-collapse: collapse;
+}
+
+table {
+  margin: 1em;
+
+  [colspan="2"] {
+    background-color: chartreuse;
+
+    &:last-of-type {
+      text-align: center;
+    }
+  }
+}
